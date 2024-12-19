@@ -2561,12 +2561,12 @@ class ViperDataset(BaseFlowDataset):
                     for fpath in flow_paths:
                         file_idx = int(fpath.stem.split("_")[1])
                         img1_path = (
-                            img_dir_path / seq_name / f"{seq_name}_{(file_idx):05d}.png"
+                            img_dir_path / seq_name / f"{seq_name}_{(file_idx):05d}.jpg"
                         )
                         img2_path = (
                             img_dir_path
                             / seq_name
-                            / f"{seq_name}_{(file_idx + 1):05d}.png"
+                            / f"{seq_name}_{(file_idx + 1):05d}.jpg"
                         )
                         if img1_path.exists() and img2_path.exists():
                             self.img_paths.append([img1_path, img2_path])
